@@ -1,8 +1,7 @@
 ﻿
 
-namespace B2B.Core.Entities
+namespace B2B.Core.Entities;
+
+public interface IEntity
 {
-    public interface IEntity
-    {
-    }
 }
