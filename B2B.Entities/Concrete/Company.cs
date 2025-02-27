@@ -13,4 +13,5 @@ public class Company:IEntity
     public string? TaskIdNumber {  get; set; }
     public string IdentityNumber {  get; set; }
     public DateTime AddedAt { get; set; }
+    public bool IsActive {  get; set; }
 }
