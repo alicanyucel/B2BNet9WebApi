@@ -2,10 +2,10 @@
 
 public class SuccessResult : Result
 {
-    public SuccessResult(bool success) : base(success)
+    public SuccessResult() : base(true)
     {
     }
-    public SuccessResult()
+    public SuccessResult(string message):base(true,message) 
     {
         
     }
