@@ -7,6 +7,6 @@ using B2B.DataAccess.Concrete.EntityFramework.Context;
 
 namespace B2B.DataAccess.Concrete.EntityFramework;
 
-internal class ÉfUserCompanyDal:EfEntityRepositoryBase<UserCompany,ContextDb>,IUserCompanyDal
+public class ÉfUserCompanyDal:EfEntityRepositoryBase<UserCompany,ContextDb>,IUserCompanyDal
 {
 }
