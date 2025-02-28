@@ -20,7 +20,7 @@ public class ContextDb:DbContext
     public DbSet<Currency> Currencies{ get; set; }
     public DbSet<CurrencyAccount> CurrenciesAccounts { get; set; }
     public DbSet<MailParameter> MailParameters { get; set; }
-    public DbSet<OpetationClaim> OpetationClaims { get; set; }
+    public DbSet<OperationClaim> OpetationClaims { get; set; }
     public DbSet<UserCompany> UserCompanies { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<UserOperationClaim> UserOperatioClaims { get; set; }
