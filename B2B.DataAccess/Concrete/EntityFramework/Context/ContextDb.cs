@@ -9,9 +9,8 @@ public class ContextDb:DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=DESKTOP-L6NJT48\SQLEXPRESS;Database=eReconciliationDb;Integrated Security=true");
+        optionsBuilder.UseSqlServer(@"Server=DESKTOP-L6NJT48\SQLEXPRESS;Database=AlicanEMutabakatDb;Integrated Security=true;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
     }
-
     public DbSet<AccountReconciliationDetail> AccountReconciliationDetails { get; set; }
     public DbSet<AccountReconciliation> AccountReconciliations { get; set; }
     public DbSet<BabsReconciliation> BabsReconciliations { get; set; }  
@@ -24,6 +23,4 @@ public class ContextDb:DbContext
     public DbSet<UserCompany> UserCompanies { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<UserOperationClaim> UserOperatioClaims { get; set; }
-
-
 }

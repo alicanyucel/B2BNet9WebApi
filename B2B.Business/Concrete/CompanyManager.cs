@@ -5,8 +5,6 @@ using B2B.Core.Utilities.Result.Abstract;
 using B2B.Core.Utilities.Result.Concrete;
 using B2B.DataAccess.Abstract;
 using B2B.Entities.Concrete;
-
-
 namespace B2B.Business.Concrete;
 
 public class CompanyManager:ICompanyService
@@ -25,16 +23,6 @@ public class CompanyManager:ICompanyService
 
     public IDataResult<List<Company>> GetList()
     {
-        return new SuccessDataResult<List<Company>>(_companyDal.GetList());
-    }
-
-    IResult ICompanyService.Add(Company company)
-    {
-        throw new NotImplementedException();
-    }
-
-    IDataResult<List<Company>> ICompanyService.GetList()
-    {
-        throw new NotImplementedException();
+        return new SuccessDataResult<List<Company>>(_companyDal.GetList(),"listeleme başarılı");
     }
 }

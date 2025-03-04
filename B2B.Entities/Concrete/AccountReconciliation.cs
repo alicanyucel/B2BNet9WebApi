@@ -1,5 +1,7 @@
-﻿using B2B.Core.Entities;
+﻿
 
+
+using B2B.Core.Entities;
 
 namespace B2B.Entities.Concrete;
 
