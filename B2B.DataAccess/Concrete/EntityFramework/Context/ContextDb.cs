@@ -9,7 +9,7 @@ public class ContextDb:DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=DESKTOP-L6NJT48\SQLEXPRESS;Database=AlicanEMutabakatDb;Integrated Security=true;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        optionsBuilder.UseSqlServer(@"Server=DESKTOP-L6NJT48\SQLEXPRESS;Database=AlicanDb;Integrated Security=true;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
     }
     public DbSet<AccountReconciliationDetail> AccountReconciliationDetails { get; set; }
     public DbSet<AccountReconciliation> AccountReconciliations { get; set; }
