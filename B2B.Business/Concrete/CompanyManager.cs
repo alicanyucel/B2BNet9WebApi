@@ -27,4 +27,14 @@ public class CompanyManager:ICompanyService
     {
         return new SuccessDataResult<List<Company>>(_companyDal.GetList());
     }
+
+    IResult ICompanyService.Add(Company company)
+    {
+        throw new NotImplementedException();
+    }
+
+    IDataResult<List<Company>> ICompanyService.GetList()
+    {
+        throw new NotImplementedException();
+    }
 }

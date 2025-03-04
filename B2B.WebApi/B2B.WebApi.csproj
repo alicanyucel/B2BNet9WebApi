@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="7.2.0" />
@@ -16,6 +17,13 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\B2B.Business\B2B.Business.csproj" />
+    <ProjectReference Include="..\B2B.Core\B2B.Core.csproj" />
+    <ProjectReference Include="..\B2B.DataAccess\B2B.DataAccess.csproj" />
+    <ProjectReference Include="..\B2B.Entities\B2B.Entities.csproj" />
   </ItemGroup>
 
 </Project>
