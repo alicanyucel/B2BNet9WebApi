@@ -15,13 +15,14 @@ namespace B2B.WebApi.Controllers
         public IActionResult GetCompanyList()
         {
             var result=_companyService.GetList();
-            if(result == null)
+            if(result.Success)
             {
                 return Ok(result);
 
             }
             return BadRequest(result.Message);
         }
+        // BAŞARILI
         [HttpPost("addedcompany")]
         public IActionResult AddCompany(Company company)
         {

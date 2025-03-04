@@ -23,6 +23,6 @@ public class CompanyManager:ICompanyService
 
     public IDataResult<List<Company>> GetList()
     {
-        return new SuccessDataResult<List<Company>>(_companyDal.GetList(),"listeleme başarılı");
+        return new SuccessDataResult<List<Company>>(_companyDal.GetList());
     }
 }
