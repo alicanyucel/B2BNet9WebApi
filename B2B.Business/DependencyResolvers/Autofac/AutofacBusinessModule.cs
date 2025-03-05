@@ -33,6 +33,11 @@ public class AutofacBusinessModule:Module
         builder.RegisterType<AccountReconciliationDetailManager>().As<IAccountReconciliationDetailService>();
         builder.RegisterType<EfAccountReconciliationDetailDal>().As<IAccountReconciliationDetailDal>();
 
+        builder.RegisterType<AuthManager>().As<IAuthService>();
+
+
+        builder.RegisterType<UserManager>().As<IUserService>();
+        builder.RegisterType<EfUserDal>().As<IUserDal>();
 
         builder.RegisterType<AccountReconciliationManager>().As<IAccountReconciliationService>();
         builder.RegisterType<EfAccountReconciliationDal>().As<IAccountReconciliationDal>();
