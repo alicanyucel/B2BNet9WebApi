@@ -23,7 +23,7 @@ public class JwtHelper : ITokenHelper
         _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
         var securityKey = SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
         var singingCredentials = SigningCredentialsHelper.CreateSigningCredintials(securityKey);
-        var jwt = CreateSecurityKeyToken(_tokenOptions, user, singingCredentials, operationClaims, companyId);
+        var jwt = CreateJwtSecurityToken(_tokenOptions, user, singingCredentials, operationClaims, companyId);
         var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
         var token = jwtSecurityTokenHandler.WriteToken(jwt);
         return new AcccessToken
