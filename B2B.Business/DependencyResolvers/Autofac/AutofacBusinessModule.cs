@@ -2,6 +2,7 @@
 using Autofac;
 using B2B.Business.Abstract;
 using B2B.Business.Concrete;
+using B2B.Core.Utilities.Security.Jwt;
 using B2B.DataAccess.Abstract;
 using B2B.DataAccess.Concrete;
 using B2B.DataAccess.Concrete.EntityFramework;
@@ -34,7 +35,7 @@ public class AutofacBusinessModule:Module
         builder.RegisterType<EfAccountReconciliationDetailDal>().As<IAccountReconciliationDetailDal>();
 
         builder.RegisterType<AuthManager>().As<IAuthService>();
-
+        builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
         builder.RegisterType<UserManager>().As<IUserService>();
         builder.RegisterType<EfUserDal>().As<IUserDal>();
