@@ -4,14 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace B2B.WebApi.Controllers
 {
-    public class CompanyController : Controller
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class CompanyController : ControllerBase
     {
         private readonly ICompanyService _companyService;
         public CompanyController(ICompanyService companyService)
         {
             _companyService = companyService;
         }
-        [HttpGet("getcompanylist")]
+        [HttpGet]
         public IActionResult GetCompanyList()
         {
             var result=_companyService.GetList();
@@ -23,7 +25,7 @@ namespace B2B.WebApi.Controllers
             return BadRequest(result.Message);
         }
         // BAŞARILI
-        [HttpPost("addedcompany")]
+        [HttpPost]
         public IActionResult AddCompany(Company company)
         {
             var result=_companyService.Add(company);
